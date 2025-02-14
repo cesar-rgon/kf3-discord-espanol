@@ -1,16 +1,20 @@
 body {
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
-    color: #f60829;
+    color: #ff4356;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 50px;
+    alignment: center;
+    padding-top: 150px;
 }
 .container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
     border-radius: 10px;
     display: inline-block;
+}
+div {
+    display: inline-grid;   
 }
 h1 {
     font-size: 48px;
@@ -21,14 +25,13 @@ p {
     color: #fafddd;
 }
 img {
-    width: 60%;
-    max-width: 400px;
+    max-width: 300px;
 }
 .btn {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: #a13f52;
+    background: #6d2f50;
     color: #fafddd;
     font-size: 18px;
     text-decoration: none;
@@ -37,5 +40,5 @@ img {
     transition: 0.3s;
 }
 .btn:hover {
-    background: #ff2200;
+    background: #a13f52;
 }
