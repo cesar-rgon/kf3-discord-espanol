@@ -7,16 +7,55 @@
     <title>Servidor Discord español de Killing Floor 3</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Servidor Discord español de Killing Floor 3</h1>
-        <p>Servidor de Discord exclusivo para gente de habla española y que juegue a Killing Floor 3.</p>
-        <p>Prepárate para conocer gente, hacer equipos y vivir una gran experiencia de juego cooperativo.</p>
-        <p>¡Te esperamos!</p>
-        <div>
-            <img src="logo.png" alt="Imagen del juego">
-            <a href="https://discord.gg/767mzWNjpg" class="btn">Únete al servidor</a>
-        </div>
-
+    <div class="video-container" id="video-container">
+    <video id="bg-video" autoplay muted playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+    </div>
+    <div class="fade-overlay" id="fade-overlay"></div>
+    <div class="content" id="content">
+        <div class="container">
+            <h1>Servidor Discord español de Killing Floor 3</h1>
+            <p>Servidor de Discord exclusivo para gente de habla española y que juegue a Killing Floor 3.</p>
+            <p>Prepárate para conocer gente, hacer equipos y vivir una gran experiencia de juego cooperativo.</p>
+            <p>¡Te esperamos!</p>
+            <div>
+                <img src="logo.png" alt="Imagen del juego">
+                <a href="https://discord.gg/767mzWNjpg" class="btn">Únete al servidor</a>
+            </div>
+        </div>        
     </div>
 </body>
 </html>
+
+<script>
+    function endVideo() {
+        let fadeOverlay = document.getElementById('fade-overlay');
+        let videoContainer = document.getElementById('video-container');
+        let content = document.getElementById('content');
+        
+        fadeOverlay.style.visibility = 'visible';
+        fadeOverlay.style.opacity = '1';
+        
+        setTimeout(() => {
+            videoContainer.style.display = 'none';
+            fadeOverlay.style.opacity = '0';
+            setTimeout(() => {
+                fadeOverlay.style.visibility = 'hidden';
+                content.style.visibility = 'visible';
+                content.style.opacity = '1';
+            }, 500);
+        }, 500);
+    }
+
+    document.getElementById('bg-video').addEventListener('ended', endVideo);
+    document.getElementById('bg-video').addEventListener('click', endVideo);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let video = document.getElementById('bg-video');
+        video.play().catch(error => {
+            console.log('Error al reproducir el video:', error);
+        });
+    });
+</script>
