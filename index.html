@@ -45,8 +45,16 @@
                 fadeOverlay.style.visibility = 'hidden';
                 content.style.visibility = 'visible';
                 content.style.opacity = '1';
-            }, 500);
-        }, 500);
+                content.style.transform = 'scale(1)';
+                content.animate([
+                    { transform: 'scale(0)' },
+                    { transform: 'scale(1)' }
+                ], {
+                    duration: 1000,
+                    fill: 'forwards'
+                });
+            }, 1000);
+        }, 1000);
     }
 
     document.getElementById('bg-video').addEventListener('ended', endVideo);
