@@ -2,6 +2,6 @@ We have created a Discord server to meet people, make teams and to play Killing 
 
 Hemos creado un servidor de Discord para conocer gente, hacer equipos y jugar a Killing Floor 3 juntos. Se llama "KF3 español" y está pensado sólo para personas de habla española. ¡Te esperamos!
 
-https://discord.gg/767mzWNjpg
+https://cesar-rgon.github.io/kf3-discord-espanol/
 
 ![Logo](logo.png)
