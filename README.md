@@ -4,4 +4,4 @@ Hemos creado un servidor de Discord para conocer gente, hacer equipos y jugar a 
 
 https://cesar-rgon.github.io/kf3-discord-espanol/
 
-![Logo](logo.png)
+![Logo](images/logo.png)
