@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "ZuumeRoughBold";
+    font-feature-settings: "liga" 0;
+    src: url("font.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -71,26 +77,21 @@ video {
 div {
     display: inline-grid;   
 }
-h1 {
-    font-family:impact;
-    font-size: 42px;
-    color: #d7525d;
-    text-shadow: 5px 5px 10px black;
-}
 p {
     font-size: 20px;
     color: #fafddd;
 }
-img {
+img #logo {
     max-width: 300px;
 }
 .btn {
+    font-family: "ZuumeRoughBold";
+    font-size: 32px;
+    color: #eee7cf;
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
     background: #6d2f50;
-    color: #fafddd;
-    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
