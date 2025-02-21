@@ -10,7 +10,6 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     alignment: center;
-    padding-top: 50px;
     overflow: hidden;
     background: url('background.png') no-repeat center center fixed; 
     background-size: cover;
@@ -97,4 +96,21 @@ img {
 }
 .btn:hover {
     background: #a13f52;
+}
+#mute-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }

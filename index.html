@@ -8,10 +8,11 @@
 </head>
 <body>
     <div class="video-container" id="video-container">
-    <video id="bg-video" autoplay muted playsinline>
-        <source src="video.mp4" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
+        <button id="mute-button">🔇</button>
+        <video id="bg-video" autoplay muted playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
     </div>
     <div class="fade-overlay" id="fade-overlay"></div>
     <div class="content" id="content">
@@ -30,6 +31,21 @@
 </html>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let muteButton = document.getElementById('mute-button');
+        let video = document.getElementById('bg-video');
+        
+        muteButton.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                video.volume = 1.0;
+                muteButton.textContent = '🔊';
+            } else {
+                video.muted = true;
+                muteButton.textContent = '🔇';
+            }
+        });
+    });
     function endVideo() {
         let fadeOverlay = document.getElementById('fade-overlay');
         let videoContainer = document.getElementById('video-container');
