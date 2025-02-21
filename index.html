@@ -3,43 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <title>Servidor Discord español de Killing Floor 3</title>
 </head>
 <body>
     <div class="video-container" id="video-container">
         <video id="bg-video" autoplay muted playsinline>
-            <source src="video.mkv" type="video/mp4">
+            <source src="media/video.mkv" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
         </video>
     </div>
     <button id="mute-button">🔇</button>
     <a id="kf3-link" href="https://killingfloor3.com/">
         <button id="kf3-button" hidden>
-            <img id="kf3-logo" src="kf3-logo.png" alt="KF3">
+            <img id="kf3-logo" src="images/kf3-logo.png" alt="KF3">
         </button>        
     </a>
     <a id="steam-link" href="https://steamcommunity.com/groups/kf3-espanol/">
         <button id="steam-button" hidden>
-            <img id="steam-logo" src="steam-logo.png" alt="Steam">
+            <img id="steam-logo" src="images/steam-logo.png" alt="Steam">
         </button>        
     </a>
     <audio id="bg-music" loop>
-        <source src="music.mp3" type="audio/mpeg">
+        <source src="media/music.mp3" type="audio/mpeg">
         Tu navegador no soporta la etiqueta de audio.
     </audio>    
     <div class="fade-overlay" id="fade-overlay"></div>
     <div class="content" id="content">
         <div class="container">
-            <img id="title" src="title.png" alt="Imagen del titulo">
+            <img id="title" src="images/title.png" alt="Imagen del titulo">
             <br/><br/>
             <p>Servidor de Discord exclusivo para gente de habla española y que juegue a Killing Floor 3.</p>
             <p>Prepárate para conocer gente, hacer equipos y vivir una gran experiencia de juego cooperativo.</p>
             <p>¡Te esperamos!</p>
             <br>
-            <div>
-                <img id="logo" src="logo.png" alt="Imagen del juego">
-                <a href="https://discord.gg/767mzWNjpg" class="btn">ENTRA AL SERVIDOR DE DISCORD</a>
+            <div style="align-items: center;">
+                <img id="logo" src="images/logo.png" alt="Imagen del juego">
+                <a href="https://discord.gg/767mzWNjpg" class="btn">
+                    <img id="discord-logo" src="images/discord-logo.png" alt="Imagen del juego">
+                        AQUI PARA UNIRTE
+                    </img>                
+                </a>
             </div>
         </div>        
     </div>

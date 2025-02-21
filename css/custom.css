@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "ZuumeRoughBold";
+    font-family: "ZuumeRough";
     font-feature-settings: "liga" 0;
-    src: url("font.otf");
+    src: url("fonts/font.otf");
 }
 
 * {
@@ -17,7 +17,7 @@ body {
     text-align: center;
     alignment: center;
     overflow: hidden;
-    background: url('background.png') no-repeat center center fixed; 
+    background: url('../images/background.png') no-repeat center center fixed; 
     background-size: cover;
 }
 .video-container {
@@ -85,17 +85,19 @@ img #logo {
     max-width: 300px;
 }
 .btn {
-    font-family: "ZuumeRoughBold";
-    font-size: 32px;
+    font-family: "ZuumeRough";
+    font-size: 40px;
     color: #eee7cf;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 10px 20px;
     background: #6d2f50;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
     transition: 0.3s;
+}
+.btn img {
+    max-width: 26px;
 }
 .btn:hover {
     background: #a13f52;
