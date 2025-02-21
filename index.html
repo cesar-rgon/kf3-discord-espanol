@@ -2,18 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">play
     <link rel="stylesheet" type="text/css" href="custom.css" />
     <title>Servidor Discord español de Killing Floor 3</title>
 </head>
 <body>
     <div class="video-container" id="video-container">
-        <button id="mute-button">🔇</button>
         <video id="bg-video" autoplay muted playsinline>
-            <source src="video.mp4" type="video/mp4">
+            <source src="video.mkv" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
         </video>
     </div>
+    <button id="mute-button">🔇</button>
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>    
     <div class="fade-overlay" id="fade-overlay"></div>
     <div class="content" id="content">
         <div class="container">
@@ -33,15 +37,14 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         let muteButton = document.getElementById('mute-button');
-        let video = document.getElementById('bg-video');
+        let bgMusic = document.getElementById('bg-music');
         
         muteButton.addEventListener('click', function() {
-            if (video.muted) {
-                video.muted = false;
-                video.volume = 1.0;
+            if (bgMusic.paused) {
+                bgMusic.play();
                 muteButton.textContent = '🔊';
             } else {
-                video.muted = true;
+                bgMusic.pause();
                 muteButton.textContent = '🔇';
             }
         });
