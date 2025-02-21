@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">play
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="custom.css" />
     <title>Servidor Discord español de Killing Floor 3</title>
 </head>
@@ -14,6 +14,16 @@
         </video>
     </div>
     <button id="mute-button">🔇</button>
+    <a id="kf3-link" href="https://killingfloor3.com/">
+        <button id="kf3-button" hidden>
+            <img id="kf3-logo" src="kf3-logo.png" alt="KF3">
+        </button>        
+    </a>
+    <a id="steam-link" href="https://steamcommunity.com/groups/kf3-espanol/">
+        <button id="steam-button" hidden>
+            <img id="steam-logo" src="steam-logo.png" alt="Steam">
+        </button>        
+    </a>
     <audio id="bg-music" loop>
         <source src="music.mp3" type="audio/mpeg">
         Tu navegador no soporta la etiqueta de audio.
@@ -32,6 +42,11 @@
                 <a href="https://discord.gg/767mzWNjpg" class="btn">ENTRA AL SERVIDOR DE DISCORD</a>
             </div>
         </div>        
+    </div>
+    <div id="credits" style="display:none">
+        <p>Página Web</p>
+        <p>desarrollada por @Rasec</p>
+        <p>diseñada por @Manga y @Rasec</p>
     </div>
 </body>
 </html>
@@ -55,7 +70,7 @@
         let fadeOverlay = document.getElementById('fade-overlay');
         let videoContainer = document.getElementById('video-container');
         let content = document.getElementById('content');
-        
+
         fadeOverlay.style.visibility = 'visible';
         fadeOverlay.style.opacity = '1';
         
@@ -74,6 +89,11 @@
                     duration: 1000,
                     fill: 'forwards'
                 });
+               setTimeout(() => {
+                   document.getElementById("kf3-button").style.display = "block";
+                   document.getElementById("steam-button").style.display = "block";
+                   document.getElementById("credits").style.display = "block";
+               }, 1200);
             }, 1000);
         }, 1000);
     }

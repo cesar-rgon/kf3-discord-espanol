@@ -117,3 +117,47 @@ img #logo {
     justify-content: center;
     z-index: 10;
 }
+#kf3-logo {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#steam-logo {
+    padding: 10px;
+    position: absolute;
+    top: 280px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#credits {
+    position: absolute;
+    bottom: 20px;
+    right:20px;
+}
+#credits p {
+    font-size: 10px;
+    color: #fafddd;   
+}
