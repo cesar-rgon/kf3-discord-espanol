@@ -106,8 +106,8 @@ img #logo {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background: rgba(0, 0, 0, 0.7);
     border: none;
     border-radius: 50%;
@@ -121,10 +121,10 @@ img #logo {
 }
 #kf3-logo {
     position: absolute;
-    top: 150px;
+    top: 140px;
     right: 20px;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background: rgba(0, 0, 0, 0.7);
     border: none;
     border-radius: 50%;
@@ -139,10 +139,82 @@ img #logo {
 #steam-logo {
     padding: 10px;
     position: absolute;
-    top: 280px;
+    top: 260px;
     right: 20px;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#facebook-logo {
+    padding: 10px;
+    position: absolute;
+    top: 380px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#youtube-logo {
+    padding: 10px;
+    position: absolute;
+    top: 500px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#tiktok-logo {
+    padding: 10px;
+    position: absolute;
+    top: 620px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#github-logo {
+    padding: 10px;
+    position: absolute;
+    top: 740px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
     background: rgba(0, 0, 0, 0.7);
     border: none;
     border-radius: 50%;
