@@ -7,8 +7,11 @@
     <title>Servidor Discord español de Killing Floor 3</title>
 </head>
 <body>
+    <div class="background-container" id="background-container">
+        <h1>PULSE PARA INICIAR</h1>
+    </div>
     <div class="video-container" id="video-container">
-        <video id="bg-video" autoplay muted playsinline>
+        <video id="bg-video" playsinline muted>
             <source src="media/video.mp4" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
         </video>
@@ -48,7 +51,6 @@
         <source src="media/music.mp3" type="audio/mpeg">
         Tu navegador no soporta la etiqueta de audio.
     </audio>    
-    <div class="fade-overlay" id="fade-overlay"></div>
     <div class="content" id="content">
         <div class="container">
             <img id="title" src="images/title.png" alt="Imagen del titulo">
@@ -79,10 +81,25 @@
     document.addEventListener('DOMContentLoaded', function() {
         let muteButton = document.getElementById('mute-button');
         let bgMusic = document.getElementById('bg-music');
-        
+        let video = document.getElementById('bg-video');
+        let backgroundContainer = document.getElementById('background-container');
+        let videoContainer = document.getElementById('video-container');
+
+        function startPlayback() {
+            backgroundContainer.style.display = 'none';
+            videoContainer.style.display = 'block';
+            video.muted = false;
+            video.play().catch(error => console.log("Reproducción bloqueada:", error));
+            document.removeEventListener('click', startPlayback);
+            muteButton.style.display = 'flex';
+            muteButton.click();
+        }
+
+        document.addEventListener('click', startPlayback);
+
         muteButton.addEventListener('click', function() {
             if (bgMusic.paused) {
-                bgMusic.play();
+                bgMusic.play().catch(error => console.log("Reproducción bloqueada:", error));
                 muteButton.textContent = '🔊';
             } else {
                 bgMusic.pause();
@@ -90,19 +107,14 @@
             }
         });
     });
+
     function endVideo() {
-        let fadeOverlay = document.getElementById('fade-overlay');
         let videoContainer = document.getElementById('video-container');
         let content = document.getElementById('content');
 
-        fadeOverlay.style.visibility = 'visible';
-        fadeOverlay.style.opacity = '1';
-        
         setTimeout(() => {
             videoContainer.style.display = 'none';
-            fadeOverlay.style.opacity = '0';
             setTimeout(() => {
-                fadeOverlay.style.visibility = 'hidden';
                 content.style.visibility = 'visible';
                 content.style.opacity = '1';
                 content.style.transform = 'scale(1)';
@@ -128,6 +140,7 @@
 
     document.getElementById('bg-video').addEventListener('ended', endVideo);
     document.getElementById('bg-video').addEventListener('click', endVideo);
+    video.pause;
 
     document.addEventListener('DOMContentLoaded', function() {
         let video = document.getElementById('bg-video');
@@ -135,4 +148,5 @@
             console.log('Error al reproducir el video:', error);
         });
     });
+
 </script>
