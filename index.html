@@ -78,23 +78,52 @@
 </html>
 
 <script>
+    let muteButton = document.getElementById('mute-button');
+    let bgMusic = document.getElementById('bg-music');
+    let video = document.getElementById('bg-video');
+    let backgroundContainer = document.getElementById('background-container');
+    let videoContainer = document.getElementById('video-container');
+
+    function startPlayback() {
+        backgroundContainer.style.display = 'none';
+        videoContainer.style.display = 'block';
+        video.muted = false;
+        video.play().catch(error => console.log("Reproducción bloqueada:", error));
+        document.removeEventListener('click', startPlayback);
+        muteButton.style.display = 'flex';
+        muteButton.click();
+    }
+
+    function restartPlayback() {
+
+        setTimeout(() => {
+           document.getElementById("kf3-button").style.display = "none";
+           document.getElementById("steam-button").style.display = "none";
+           document.getElementById("facebook-button").style.display = "none";
+           document.getElementById("youtube-button").style.display = "none";
+           document.getElementById("tiktok-button").style.display = "none";
+           document.getElementById("github-button").style.display = "none";
+           document.getElementById("credits").style.display = "none";
+
+            content.style.transform = 'scale(1)';
+            content.animate([
+                { transform: 'scale(1)' },
+                { transform: 'scale(0)' }
+            ], {
+                duration: 1000,
+                fill: 'forwards'
+            });
+        }, 0);
+
+        backgroundContainer.style.display = 'none';
+        videoContainer.style.display = 'block';
+        video.muted = false;
+        video.play().catch(error => console.log("Reproducción bloqueada:", error));
+        document.removeEventListener('click', startPlayback);
+        muteButton.style.display = 'flex';
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        let muteButton = document.getElementById('mute-button');
-        let bgMusic = document.getElementById('bg-music');
-        let video = document.getElementById('bg-video');
-        let backgroundContainer = document.getElementById('background-container');
-        let videoContainer = document.getElementById('video-container');
-
-        function startPlayback() {
-            backgroundContainer.style.display = 'none';
-            videoContainer.style.display = 'block';
-            video.muted = false;
-            video.play().catch(error => console.log("Reproducción bloqueada:", error));
-            document.removeEventListener('click', startPlayback);
-            muteButton.style.display = 'flex';
-            muteButton.click();
-        }
-
         document.addEventListener('click', startPlayback);
 
         muteButton.addEventListener('click', function() {
@@ -133,13 +162,17 @@
                    document.getElementById("tiktok-button").style.display = "block";
                    document.getElementById("github-button").style.display = "block";
                    document.getElementById("credits").style.display = "block";
+                   setTimeout(() => {
+                        restartPlayback();
+                   }, 20000);     
                }, 1200);
             }, 1000);
-        }, 1000);
+        }, 0);
     }
 
     document.getElementById('bg-video').addEventListener('ended', endVideo);
     document.getElementById('bg-video').addEventListener('click', endVideo);
+
     video.pause;
 
     document.addEventListener('DOMContentLoaded', function() {
