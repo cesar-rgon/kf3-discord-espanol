@@ -11,7 +11,7 @@
         <h1>PULSE PARA INICIAR</h1>
     </div>
     <div class="video-container" id="video-container">
-        <video id="bg-video" playsinline muted>
+        <video id="bg-video" preload="auto" muted>
             <source src="media/video.mp4" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
         </video>
@@ -140,6 +140,7 @@
     function endVideo() {
         let videoContainer = document.getElementById('video-container');
         let content = document.getElementById('content');
+        video.pause();
 
         setTimeout(() => {
             videoContainer.style.display = 'none';
@@ -173,7 +174,9 @@
     document.getElementById('bg-video').addEventListener('ended', endVideo);
     document.getElementById('bg-video').addEventListener('click', endVideo);
 
-    video.pause;
+    // Precargar y pausar el video inmediatamente
+    video.load();
+    video.play().then(() => video.pause()).catch(error => console.log("Error al precargar el video:", error));
 
     document.addEventListener('DOMContentLoaded', function() {
         let video = document.getElementById('bg-video');
